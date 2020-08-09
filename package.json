@@ -1,0 +1,11 @@
+{
+  "name": "learn-restify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "JunwuHuang <978162622@qq.com>",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^7.1.0",
+    "restify": "^8.5.1"
+  }
+}
