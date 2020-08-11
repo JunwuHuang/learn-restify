@@ -18,6 +18,21 @@ tweets routes | not yet
 - restify
 - better-sqlite3
 
+## 开发环境
+```shell
+$ node -v
+v12.18.2
+```
+```shell
+$ yarn -v
+1.22.4
+```
+
+## 运行项目
+```shell
+$ yarn start
+```
+
 ## 数据表
 
 ### users
