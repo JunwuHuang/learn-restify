@@ -1,6 +1,6 @@
 const { db } = require('.')
 
-export class Users {
+class Users {
     constructor() {
         const createTableSql = `
             CREATE TABLE IF NOT EXISTS users (
@@ -86,6 +86,11 @@ export class Users {
         ipAddress = '',
         avatarUrl = ''
     }) {
+        console.log(oldUserName, {
+            userName,
+            ipAddress,
+            avatarUrl
+        })
         const stmt = db.prepare(`
             UPDATE
                 users
@@ -133,3 +138,5 @@ export class Users {
         }
     }
 }
+
+module.exports = Users
