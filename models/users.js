@@ -86,11 +86,6 @@ class Users {
         ipAddress = '',
         avatarUrl = ''
     }) {
-        console.log(oldUserName, {
-            userName,
-            ipAddress,
-            avatarUrl
-        })
         const stmt = db.prepare(`
             UPDATE
                 users
