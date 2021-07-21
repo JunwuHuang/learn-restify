@@ -1,9 +1,16 @@
 const restify = require('restify')
+const corsMiddleware = require('restify-cors-middleware')
 const USERS_ROUTES = require('./routes/users')
 const TWEETS_ROUTES = require('./routes/tweets')
 
 const server = restify.createServer()
 
+const cors = corsMiddleware({
+    origins: ['*']
+})
+
+server.use(cors.preflight)
+server.use(cors.actual)
 server.use(restify.plugins.queryParser())
 server.use(restify.plugins.bodyParser())
 server.get('/', function(req, res, next) {
